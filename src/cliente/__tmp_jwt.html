@@ -19,7 +19,7 @@
                 $.ajax({
                     url: '/api/productos',
                     headers: {
-                        'X-JWT-TOKEN': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBlZGlkbyI6MTU0ODE1MTk2OSwiZXhwaXJhIjoxNTQ4MjM4MzY5LCJkYXRhIjp7InVzdWFyaW8iOiJqdWFuaXRvMTIzIiwibml2ZWxQcml2aWxlZ2lvcyI6MTB9fQ.gM9_D8ENUQRloplzM3Qi_iKJCG73DgJWLDu1zyQ_sAU'
+                        'X-JWT-TOKEN': jwtToken
                     }
                 })
                     .then(productos => {
