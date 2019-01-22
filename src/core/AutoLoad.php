@@ -5,9 +5,6 @@ class AutoLoad {
     public function load($classNameSpace) {
         $classPath = str_replace("\\", "/", $classNameSpace);
         $className = substr($classNameSpace, strrpos($classNameSpace, "\\") + 1);
-
-        echo '@@INTENTANDO CARGAR -- ' . ROOT . DS . $classPath . ".php" . "<br>";
-
         if (!@include_once ROOT . DS . $classPath . ".php") {
             throw new Exception("Can't load $classPath");
         }
