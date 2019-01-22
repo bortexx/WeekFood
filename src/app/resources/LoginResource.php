@@ -37,9 +37,11 @@ EOD;
 
         $jwt = JWT::encode($token, $privateKey, 'HS256');
 
-        echo json_encode([
+        $this->data = [
             "token" => $jwt
-        ]);
+        ];
+
+        $this->setData();
 /*
         $decoded = JWT::decode($jwt, $privateKey, array('HS256'));
 
