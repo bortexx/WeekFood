@@ -41,6 +41,11 @@ return [
             "route" => "api/productos/categorias/:categoriaPrincipal/:categoriaEspecifica",
             "resource" => "productos",
             "action" => "getCategoria"
+        ],
+        "API, login" => [
+            "route" => "api/login",
+            "resource" => "login",
+            "action" => "getToken"
         ]
     ]
 ];
