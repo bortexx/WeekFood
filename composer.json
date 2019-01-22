@@ -1,0 +1,10 @@
+{
+    "name": "weekfood/weekfood",
+    "type": "project",
+    "require": {
+        "firebase/php-jwt": "^5.0"
+    },
+    "config": {
+        "vendor-dir": "src/vendor"
+    }
+}
