@@ -1,7 +1,7 @@
 <?php
 
 use core\MVC\Resource as Resource;
-use vendor\firebase\phpjwt\JWT as JWT;
+use core\Auth as Auth;
 
 class ProductosResource extends Resource {
     public function getCarruselAction() {
@@ -11,7 +11,6 @@ class ProductosResource extends Resource {
     }
 
     public function getTodosAction() {
-
         /* estaAutenticado */
         if (!isset(getallheaders()['x-jwt-token'])) {
             header('HTTP/1.1 403 Forbidden', true, 403);
@@ -21,8 +20,12 @@ class ProductosResource extends Resource {
 
         $jwt = getallheaders()['x-jwt-token'];
 
-        echo '@@@ JWT' . $jwt;
+        $token = Auth::decodeToken($jwt);
+
+        var_dump($token);
+
         /* end estaAutenticado */
+
         //if ()
 
         $this->sql = 'SELECT * FROM productos';
